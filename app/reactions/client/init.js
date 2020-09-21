@@ -122,7 +122,7 @@ Meteor.startup(function() {
 
 			return true;
 		},
-		order: -20,
+		order: -23,
 		group: 'message',
 	});
 
@@ -160,7 +160,7 @@ Meteor.startup(function() {
 
 			return true;
 		},
-		order: -20,
+		order: -22,
 		group: 'message',
 	});
 
@@ -198,7 +198,7 @@ Meteor.startup(function() {
 
 			return true;
 		},
-		order: -20,
+		order: -21,
 		group: 'message',
 	});
 });

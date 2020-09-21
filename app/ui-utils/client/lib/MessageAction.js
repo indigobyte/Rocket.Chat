@@ -201,8 +201,20 @@ Meteor.startup(async function() {
 				.data('reply', messages)
 				.trigger('dataChange');
 		},
-		condition({ subscription }) {
-			if (subscription == null) {
+		condition({ msg: message, u: user, room, subscription }) {
+			if (!room) {
+				return false;
+			}
+
+			if (!subscription) {
+				return false;
+			}
+
+			if (message.private) {
+				return false;
+			}
+
+			if (roomTypes.readOnly(room._id, user._id) && !room.reactWhenReadOnly) {
 				return false;
 			}
 

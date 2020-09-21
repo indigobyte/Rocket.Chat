@@ -154,6 +154,7 @@ Meteor.startup(async function() {
 		return chatMessages[`${ rid }-${ tmid }`] || chatMessages[rid];
 	};
 
+	/*
 	MessageAction.addButton({
 		id: 'reply-directly',
 		icon: 'reply-directly',
@@ -178,6 +179,7 @@ Meteor.startup(async function() {
 		order: 0,
 		group: 'menu',
 	});
+	*/
 
 	MessageAction.addButton({
 		id: 'quote-message',
@@ -207,9 +209,10 @@ Meteor.startup(async function() {
 			return true;
 		},
 		order: -3,
-		group: ['message', 'menu'],
+		group: 'message',
 	});
 
+	/*
 	MessageAction.addButton({
 		id: 'permalink',
 		icon: 'permalink',
@@ -228,7 +231,9 @@ Meteor.startup(async function() {
 		order: 4,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'copy',
 		icon: 'copy',
@@ -246,6 +251,7 @@ Meteor.startup(async function() {
 		order: 5,
 		group: 'menu',
 	});
+	*/
 
 	MessageAction.addButton({
 		id: 'edit-message',

@@ -49,6 +49,7 @@ Template.room.events({
 });
 
 Meteor.startup(function() {
+	/*
 	MessageAction.addButton({
 		id: 'reaction-message',
 		icon: 'add-reaction',
@@ -84,5 +85,120 @@ Meteor.startup(function() {
 		},
 		order: -2,
 		group: ['message', 'menu'],
+	});
+	*/
+
+	MessageAction.addButton({
+		id: 'like-message',
+		icon: 'add-like',
+		label: 'Add_Like',
+		context: [
+			'message',
+			'message-mobile',
+			'threads',
+		],
+		action(event) {
+			event.stopPropagation();
+			const { msg } = messageArgs(this);
+			// EmojiPicker.open(event.currentTarget, (emoji) => Meteor.call('setReaction', `:${ emoji }:`, msg._id));
+			Meteor.call('setReaction', ':thumbup:', msg._id);
+		},
+		condition({ msg: message, u: user, room, subscription }) {
+			if (!room) {
+				return false;
+			}
+
+			if (!subscription) {
+				return false;
+			}
+
+			if (message.private) {
+				return false;
+			}
+
+			if (roomTypes.readOnly(room._id, user._id) && !room.reactWhenReadOnly) {
+				return false;
+			}
+
+			return true;
+		},
+		order: -20,
+		group: 'message',
+	});
+
+	MessageAction.addButton({
+		id: 'dislike-message',
+		icon: 'add-dislike',
+		label: 'Add_Dislike',
+		context: [
+			'message',
+			'message-mobile',
+			'threads',
+		],
+		action(event) {
+			event.stopPropagation();
+			const { msg } = messageArgs(this);
+			// EmojiPicker.open(event.currentTarget, (emoji) => Meteor.call('setReaction', `:${ emoji }:`, msg._id));
+			Meteor.call('setReaction', ':thumbdown:', msg._id);
+		},
+		condition({ msg: message, u: user, room, subscription }) {
+			if (!room) {
+				return false;
+			}
+
+			if (!subscription) {
+				return false;
+			}
+
+			if (message.private) {
+				return false;
+			}
+
+			if (roomTypes.readOnly(room._id, user._id) && !room.reactWhenReadOnly) {
+				return false;
+			}
+
+			return true;
+		},
+		order: -20,
+		group: 'message',
+	});
+
+	MessageAction.addButton({
+		id: 'question-message',
+		icon: 'add-question',
+		label: 'Add_Question',
+		context: [
+			'message',
+			'message-mobile',
+			'threads',
+		],
+		action(event) {
+			event.stopPropagation();
+			const { msg } = messageArgs(this);
+			// EmojiPicker.open(event.currentTarget, (emoji) => Meteor.call('setReaction', `:${ emoji }:`, msg._id));
+			Meteor.call('setReaction', ':face_with_monocle:', msg._id);
+		},
+		condition({ msg: message, u: user, room, subscription }) {
+			if (!room) {
+				return false;
+			}
+
+			if (!subscription) {
+				return false;
+			}
+
+			if (message.private) {
+				return false;
+			}
+
+			if (roomTypes.readOnly(room._id, user._id) && !room.reactWhenReadOnly) {
+				return false;
+			}
+
+			return true;
+		},
+		order: -20,
+		group: 'message',
 	});
 });

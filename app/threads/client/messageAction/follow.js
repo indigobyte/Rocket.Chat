@@ -11,6 +11,7 @@ Meteor.startup(function() {
 		if (!settings.get('Threads_enabled')) {
 			return MessageAction.removeButton('follow-message');
 		}
+		/*
 		MessageAction.addButton({
 			id: 'follow-message',
 			icon: 'bell',
@@ -32,5 +33,6 @@ Meteor.startup(function() {
 			order: 2,
 			group: 'menu',
 		});
+		*/
 	});
 });

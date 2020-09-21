@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { TabBar } from '../../ui-utils';
 
 Meteor.startup(function() {
+	/*
 	TabBar.addButton({
 		groups: ['channel', 'group', 'direct'],
 		id: 'starred-messages',
@@ -11,4 +12,5 @@ Meteor.startup(function() {
 		template: 'starredMessages',
 		order: 10,
 	});
+	*/
 });

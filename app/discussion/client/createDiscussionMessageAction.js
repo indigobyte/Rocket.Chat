@@ -13,6 +13,7 @@ Meteor.startup(function() {
 			return MessageAction.removeButton('start-discussion');
 		}
 
+		/*
 		MessageAction.addButton({
 			id: 'start-discussion',
 			icon: 'discussion',
@@ -48,5 +49,6 @@ Meteor.startup(function() {
 			order: 1,
 			group: 'menu',
 		});
+		*/
 	});
 });

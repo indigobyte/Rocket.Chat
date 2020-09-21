@@ -12,6 +12,7 @@ import { hasAtLeastOnePermission } from '../../authorization';
 import { Rooms } from '../../models/client';
 
 Meteor.startup(function() {
+	/*
 	MessageAction.addButton({
 		id: 'pin-message',
 		icon: 'pin',
@@ -36,7 +37,9 @@ Meteor.startup(function() {
 		order: 7,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'unpin-message',
 		icon: 'pin',
@@ -61,7 +64,9 @@ Meteor.startup(function() {
 		order: 8,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'jump-to-pin-message',
 		icon: 'jump',
@@ -91,7 +96,9 @@ Meteor.startup(function() {
 		order: 100,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'permalink-pinned',
 		icon: 'permalink',
@@ -110,4 +117,5 @@ Meteor.startup(function() {
 		order: 101,
 		group: 'menu',
 	});
+	*/
 });

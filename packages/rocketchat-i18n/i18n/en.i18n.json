@@ -4003,5 +4003,8 @@
   "Your_question": "Your question",
   "Your_server_link": "Your server link",
   "Your_temporary_password_is_password": "Your temporary password is <strong>[password]</strong>.",
-  "Your_workspace_is_ready": "Your workspace is ready to use 🎉"
+  "Your_workspace_is_ready": "Your workspace is ready to use 🎉",
+  "Add_Like": "Like",
+  "Add_Dislike": "Dislike",
+  "Add_Question": "WAT"
 }

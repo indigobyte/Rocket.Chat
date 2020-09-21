@@ -11,6 +11,7 @@ Meteor.startup(function() {
 		if (!settings.get('Threads_enabled')) {
 			return MessageAction.removeButton('reply-in-thread');
 		}
+		/*
 		MessageAction.addButton({
 			id: 'reply-in-thread',
 			icon: 'thread',
@@ -30,5 +31,6 @@ Meteor.startup(function() {
 			order: -1,
 			group: ['message', 'menu'],
 		});
+		*/
 	});
 });

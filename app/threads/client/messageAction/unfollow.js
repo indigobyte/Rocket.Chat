@@ -11,6 +11,7 @@ Meteor.startup(function() {
 		if (!settings.get('Threads_enabled')) {
 			return MessageAction.removeButton('unfollow-message');
 		}
+		/*
 		MessageAction.addButton({
 			id: 'unfollow-message',
 			icon: 'bell-off',
@@ -32,5 +33,6 @@ Meteor.startup(function() {
 			order: 2,
 			group: 'menu',
 		});
+		*/
 	});
 });

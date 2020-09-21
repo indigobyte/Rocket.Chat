@@ -5,6 +5,7 @@ import { TabBar } from '../../../ui-utils';
 import { hasAllPermission } from '../../../authorization';
 
 Meteor.startup(() => {
+	/*
 	TabBar.addButton({
 		groups: ['channel', 'group', 'direct'],
 		id: 'clean-history',
@@ -15,4 +16,5 @@ Meteor.startup(() => {
 		order: 250,
 		condition: () => hasAllPermission('clean-channel-history', Session.get('openedRoom')),
 	});
+	*/
 });

@@ -11,6 +11,7 @@ import { messageArgs } from '../../ui-utils/client/lib/messageArgs';
 import { Rooms } from '../../models/client';
 
 Meteor.startup(function() {
+	/*
 	MessageAction.addButton({
 		id: 'star-message',
 		icon: 'star',
@@ -35,7 +36,9 @@ Meteor.startup(function() {
 		order: 9,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'unstar-message',
 		icon: 'star',
@@ -60,7 +63,9 @@ Meteor.startup(function() {
 		order: 9,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'jump-to-star-message',
 		icon: 'jump',
@@ -94,7 +99,9 @@ Meteor.startup(function() {
 		order: 100,
 		group: 'menu',
 	});
+	*/
 
+	/*
 	MessageAction.addButton({
 		id: 'permalink-star',
 		icon: 'permalink',
@@ -117,4 +124,5 @@ Meteor.startup(function() {
 		order: 101,
 		group: 'menu',
 	});
+	*/
 });

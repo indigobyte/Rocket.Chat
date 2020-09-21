@@ -48,6 +48,7 @@ TabBar.addButton({
 	},
 });
 
+/*
 TabBar.addButton({
 	groups: ['channel', 'group'],
 	id: 'members-list',
@@ -68,7 +69,9 @@ TabBar.addButton({
 		return hasAllPermission('view-broadcast-member-list', rid);
 	},
 });
+*/
 
+/*
 TabBar.addButton({
 	groups: ['channel', 'group', 'direct'],
 	id: 'uploaded-files-list',
@@ -77,7 +80,9 @@ TabBar.addButton({
 	template: 'uploadedFilesList',
 	order: 6,
 });
+*/
 
+/*
 TabBar.addButton({
 	groups: ['channel', 'group', 'direct'],
 	id: 'keyboard-shortcut-list',
@@ -86,3 +91,4 @@ TabBar.addButton({
 	template: 'keyboardShortcuts',
 	order: 99,
 });
+*/

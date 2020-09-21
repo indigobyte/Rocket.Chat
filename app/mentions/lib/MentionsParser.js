@@ -73,7 +73,7 @@ export class MentionsParser {
 					.map(({ name, username }) => (this.useRealName ? name : username))
 					.map((label) => label && s.escapeHTML(label))[0];
 
-			if (!label) {
+			if (!label || mention === 'poll.bot') {
 				return match;
 			}
 

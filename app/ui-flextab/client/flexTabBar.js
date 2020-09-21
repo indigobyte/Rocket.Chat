@@ -218,9 +218,11 @@ Template.RoomsActionTab.onDestroyed(function() {
 	$(window).off('resize', this.refresh);
 });
 Template.RoomsActionTab.onCreated(function() {
-	this.small = new ReactiveVar(window.matchMedia('(max-width: 500px)').matches);
+	// this.small = new ReactiveVar(window.matchMedia('(max-width: 500px)').matches);
+	this.small = new ReactiveVar(false);
 	this.refresh = _.throttle(() => {
-		this.small.set(window.matchMedia('(max-width: 500px)').matches);
+		// this.small.set(window.matchMedia('(max-width: 500px)').matches);
+		this.small.set(false);
 	}, 100);
 	$(window).on('resize', this.refresh);
 	this.tabBar = Template.currentData().tabBar;

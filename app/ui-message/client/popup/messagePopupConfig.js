@@ -70,6 +70,10 @@ const fetchUsersFromServer = _.throttle(async (filterText, records, rid, cb) => 
 		// .slice(0, 5)
 		.forEach(({ username, nickname, name, status, avatarETag, outside }) => {
 			// if (records.length < 5) {
+			if (username === 'poll.bot') {
+				return;
+			}
+
 			records.push({
 				_id: username,
 				username,
@@ -209,7 +213,6 @@ Template.messagePopupConfig.helpers({
 				const { rid } = this;
 				const filterText = filter.trim();
 				const filterRegex = filterText !== '' && new RegExp(`${ RegExp.escape(filterText) }`, 'i');
-
 				const items = template.usersFromRoomMessages
 					.find(
 						{

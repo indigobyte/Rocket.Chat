@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { TabBar } from '../../../ui-utils';
 
 Meteor.startup(() => {
+	/*
 	TabBar.addButton({
 		groups: ['channel', 'group'],
 		id: 'channel-settings',
@@ -12,4 +13,5 @@ Meteor.startup(() => {
 		template: 'channelSettings',
 		order: 7,
 	});
+	*/
 });
